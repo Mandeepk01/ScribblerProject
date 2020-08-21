@@ -65,13 +65,13 @@
   font-size: 28px;
   font-weight: bold;
 }
-.Sign-Up-Button
+.SignUp-Button
  {
    width: 100% ;
    background-color: #4caf50 ;
 
  }
- .Sign-Up-Button:hover
+ .SignUp-Button:hover
  {
    background-color: orangered;
  }
