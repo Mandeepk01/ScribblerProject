@@ -10,8 +10,8 @@
 </head>
 <body>
   <div class="header">
-    <button id ="top-button1" >Sign In</button>
-    <button id ="top-button2" >Sign Up</button>
+      <button onclick="showSignInModal()"id ="top-button2" >Sign In</button>
+      <button onclick="showSignUpModal()" id ="top-button1" >Sign Up</button>
      <a id="pageTitle" >ScriBBler</a>
      <p class="subText">Explore Imagine Create</p>
  </div>
@@ -32,14 +32,34 @@
        <hr class = "shade">
       <form class = "form-style">
       <label>Name</label><br>
-      <input type="text" placeholder="Enter Full Name" required> <br>
+      <input type="text" placeholder="Enter your name" required> <br>
       <label>Username</label><br>
-      <input type="text" placeholder="Enter Username" required><br>
+      <input type="text" placeholder="Enter your username" required><br>
       <label>Password </label><br>
-      <input type="password" placeholder="Enter Password" required><br>
+      <input type="password" placeholder="Enter your password" required><br>
       <label>Confirm Password</label><br>
       <input type="password" placeholder="Re-enter your password" required><br>
       <button class = "SignUp-Button">Sign Up</button>
+      </form>
+    </p>
+  </div>
+</div>
+  <!--sign in page -->
+<div id="myModal2" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>
+      <h1>Welcome Back !</h1>
+      <hr class = "shade">
+      <form class = "form-style">
+        <label>Username</label> <br>
+        <input type="text" placeholder="Enter your username" required>
+        <label>Password</label> <br>
+        <input type="password" placeholder="Enter your password" required> <br>
+        <button class = "SignUp-Button">
+          Sign In
+        </button><br><b>
+        Not a member ? </b><span onclick="hideSignInModal();showSignUpModal()"<a id = "link">Sign Up</span></a>
       </form>
     </p>
   </div>
