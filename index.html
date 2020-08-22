@@ -18,8 +18,8 @@
  <div id="bottombtn">
    <p align = "center">
       <a href = "html/bloglist.html">
-        <button class ="bottombutton1" >All Posts</button></a>
-        <button class ="bottombutton2" >Create Post</button>
+        <button class ="bottombutton1" id="All-post-Modal">All Posts</button></a>
+        <button class ="bottombutton2" id ="Create-Post-Modal">Create Post</button>
   </div>
 
 <div id="myModal1" class="modal">
@@ -64,6 +64,25 @@
     </p>
   </div>
 </div>
+ <!-- create post-->
+ <div id="myModal3" class="modal">
+     <div class="modal-content">
+       <span class="close">&times;</span>
+       <p>
+        <form class = "form-style">
+         <h2 class="modal-title">Pen your post</h2>
+          <hr class = "shade">
+         <h4>Title</h4>
+         <input type="text" placeholder="Enter title of your post">
+         <h4>Content</h4>
+         <textarea placeholder="Enter the contents of your post" name="Content" cols="35" rows="15"></textarea>
+         <button class = SignUp-Button>Create</button>
+         </form>
+       </p>
+     </div>
+   </div>
+
+<script src = "js\common.js"></script>
 <script src = "js\index.js"></script>
 </body>
 
