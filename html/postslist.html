@@ -2,129 +2,243 @@
 <html>
 
 <head>
-    <!-- TODO: Include Font Awesome file here -->
-    <!-- TODO: Include Google Fonts file here -->
+  <link href="..\css\common.css" rel="stylesheet" type="text/css">
+  <link href="..\css\postslist.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Ubuntu Mono' rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
 </head>
 
 <body>
-    <!-- TODO: Include code for header here -->
+    <body>
+      <div class="header">
+          <button onclick="showSignInModal()"id ="top-button2" >Sign In</button>
+          <button onclick="showSignUpModal()" id ="top-button1" >Sign Up</button>
+         <a id="pageTitle" >ScriBBler</a>
+         <p class="subText">Explore Imagine Create</p>
+     </div>
 
+    <div id="myModal1" class="modal">
+      <div class="modal-content">
+        <span class="close">
+          &times;
+        </span>
+        <p>
+          <h1>Get Started</h1>
+           <hr class = "shade">
+          <form class = "form-style">
+          <label>Name</label><br>
+          <input type="text" placeholder="Enter your name" required> <br>
+          <label>Username</label><br>
+          <input type="text" placeholder="Enter your username" required><br>
+          <label>Password </label><br>
+          <input type="password" placeholder="Enter your password" required><br>
+          <label>Confirm Password</label><br>
+          <input type="password" placeholder="Re-enter your password" required><br>
+          <button class = "SignUp-Button">Sign Up</button>
+          </form>
+        </p>
+      </div>
+    </div>
+      <!--sign in page -->
+    <div id="myModal2" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>
+          <h1>Welcome Back !</h1>
+          <hr class = "shade">
+          <form class = "form-style">
+            <label>Username</label> <br>
+            <input type="text" placeholder="Enter your username" required>
+            <label>Password</label> <br>
+            <input type="password" placeholder="Enter your password" required> <br>
+            <button class = "SignUp-Button">
+              Sign In
+            </button><br><b>
+            Not a member ? </b><span onclick="hideSignInModal();showSignUpModal()"<a id = "link">Sign Up</span></a>
+          </form>
+        </p>
+      </div>
+    </div>
     <!-- ATTENTION: The HTML code for the list of posts has been given to you. You can feel free to add/delete/modify this code. You need to write the proper CSS and JavaScript code corresponding to this page so that the result looks like the screenshots given to you in the Project Statement. -->
 
     <!-- list of all posts starts here -->
-    <div>
+    <div class="allPostsContainer">
+    <div class="post">
+        <div class="post-left">
+            <p class="post-username">Shristi Gupta</p>
+        </div>
+        <div class="post-content">
 
-        <!-- post 1 starts here -->
-        <div>
-            <div>
-                <p>Srishti Gupta</p>
+            <!-- Insert code for Trash icon here -->
+            <div class="post-trash">
+                <i class="fa fa-trash" style="font-size:22px"></i>
             </div>
 
-            <div>
-                <div>
-                    <p>‘let’ me be a ‘const’(ant), not a ‘var’(iable)!</p>
-                    <span>
-                        <!-- TODO: Include Font Awesome icon for delete icon here -->
-                    </span>
+              <p class="post-title">‘let’ me be a ‘const’(ant), not a ‘var’(iable)!</p>
+            <p class="post-desc">Since JavaScript does not have any type-checking, either of these keywords can be used to declare a variable of any type (datatype) in JavaScript. Though all the three keywords are used for the same purpose, they are different.</p>
+
+            <!-- Insert code for ... icon here -->
+            <div class="post-more" onclick="navigateToPost()">
+                <i class="fa fa-ellipsis-h"></i>
+            </div>
+
+            <!-- Modal for trash -->
+            <div class="trash-modal">
+                <!-- Modal content -->
+                <div class="trash-modal-content">
+                    <p>Are you sure you want to delete this post?</p>
+                    <div class="trash-buttons-container">
+                        <button class="trash-modal-button-yes">Yes</button>
+                        <button class="trash-modal-button-no">No</button>
+                    </div>
                 </div>
-                <p>Since JavaScript does not have any type-checking, either of these keywords can be used to declare a variable of any type (datatype) in JavaScript. Though all the three keywords are used for the same purpose, they are different.</p>
-                <span>
-                    <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
-                </span>
             </div>
         </div>
-        <!-- post 1 ends here -->
-
-        <!-- post 2 starts here -->
-        <div>
-            <div>
-                <p>Colby Fayock</p>
-            </div>
-
-            <div>
-                <div>
-                    <p>What is linting and how can it save you time?</p>
-                    <span>
-                        <!-- TODO: Include Font Awesome icon for delete icon here -->
-                    </span>
-                </div>
-                <p>One of the biggest challenges in software development is time. It’s something we can’t easily get more of, but linting can help us make the most out of the time we have.</p>
-                <span>
-                    <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
-                </span>
-            </div>
-        </div>
-        <!-- post 2 ends here -->
-
-        <!-- post 3 starts here -->
-        <div>
-            <div>
-                <p>Yazeed Bzadough</p>
-            </div>
-
-            <div>
-                <div>
-                    <p>How to Get More Views on Your Tech Blog</p>
-                    <span>
-                        <!-- TODO: Include Font Awesome icon for delete icon here -->
-                    </span>
-                </div>
-                <p>If you're a developer with a Twitter account, you've already seen everyone and their cat start a blog, YouTube channel, or Patreon. We all want to become stars, or at the very least, a recognizable name in the industry.</p>
-                <span>
-                    <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
-                </span>
-            </div>
-        </div>
-        <!-- post 3 ends here -->
-
-        <!-- post 4 starts here -->
-        <div>
-            <div>
-                <p>Cedd Burge</p>
-            </div>
-
-            <div>
-                <div>
-                    <p>How to write easily describable code</p>
-                    <span>
-                        <!-- TODO: Include Font Awesome icon for delete icon here -->
-                    </span>
-                </div>
-                <p>When code is not describable using words, most people have to do some mental mapping to turn it in to words. This wastes mental energy, and you run the risk of getting the mapping wrong. Different people will map to different words, which
-                    leads to confusion when discussing the code.</p>
-                <span>
-                    <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
-                </span>
-            </div>
-        </div>
-        <!-- post 4 ends here -->
-
-        <!-- post 5 starts here -->
-        <div>
-            <div>
-                <p>Srishti Gupta</p>
-            </div>
-
-            <div>
-                <div>
-                    <p>Everything you should know about ‘module’ & ‘require’ in Node.js</p>
-                    <span>
-                        <!-- TODO: Include Font Awesome icon for delete icon here -->
-                    </span>
-                </div>
-                <p>Node.js treats each JavaScript file as a separate module. For instance, if you have a file containing some code and this file is named xyz.js, then this file is treated as a module in Node, and you can say that you’ve created a module
-                    named xyz.</p>
-                <span>
-                    <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
-                </span>
-            </div>
-        </div>
-        <!-- post 5 ends here -->
-
-        <!-- TODO: Write code for delete post modal here -->
-
     </div>
-    <!-- list of all posts ends here -->
+    <div class="post">
+        <div class="post-left">
+            <p class="post-username">Colby Fayock</p>
+        </div>
+        <div class="post-content">
+
+                <!-- Insert code for Trash icon here -->
+                <div class="post-trash">
+                    <i class="fa fa-trash" style="font-size:22px"></i>
+                </div>
+
+                <p class="post-title">What is linting and how can it save you time?</p>
+                <p class="post-desc">One of the biggest challenges in software development is time. It’s something we can’t easily get more of, but linting can help us make the most out of the time we have.</p>
+
+                <!-- Insert code for ... icon here -->
+                <div class="post-more" onclick="navigateToPost()">
+                    <i class="fa fa-ellipsis-h"></i>
+                </div>
+
+                <!-- Modal for trash -->
+                <div class="trash-modal">
+                    <!-- Modal content -->
+                    <div class="trash-modal-content">
+                        <p>Are you sure you want to delete this post?</p>
+                        <div class="trash-buttons-container">
+                            <button class="trash-modal-button-yes">Yes</button>
+                            <button class="trash-modal-button-no">No</button>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+    </div>
+
+    <div class="post">
+        <div class="post-left">
+            <p class="post-username">Yazeed Bzadough</p>
+        </div>
+        <div class="post-content">
+
+            <!-- Insert code for Trash icon here -->
+                <div class="post-trash">
+                    <i class="fa fa-trash" style="font-size:22px"></i>
+                </div>
+
+                <p class="post-title">How to Get More Views on Your Tech Blog</p>
+                <p class="post-desc">If you're a developer with a Twitter account, you've already seen everyone and their cat start a blog, YouTube channel, or Patreon. We all want to become stars, or at the very least, a recognizable name in the industry.</p>
+
+                <!-- Insert code for ... icon here -->
+                <div class="post-more" onclick="navigateToPost()">
+                    <i class="fa fa-ellipsis-h"></i>
+                </div>
+
+                <!-- Modal for trash -->
+                <div class="trash-modal">
+                    <!-- Modal content -->
+                    <div class="trash-modal-content">
+                        <p>Are you sure you want to delete this post?</p>
+                        <div class="trash-buttons-container">
+                            <button class="trash-modal-button-yes">Yes</button>
+                            <button class="trash-modal-button-no">No</button>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+    </div>
+
+    <div class="post">
+        <div class="post-left">
+            <p class="post-username">Cedd Burge</p>
+        </div>
+        <div class="post-content">
+
+            <!-- Insert code for Trash icon here -->
+            <div class="post-trash">
+                <i class="fa fa-trash" style="font-size:22px"></i>
+            </div>
+
+            <p class="post-title">How to write easily describable code</p>
+            <p class="post-desc">When code is not describable using words, most people have to do some mental mapping to turn it in to words. This wastes mental energy, and you run the risk of getting the mapping wrong. Different people will map to different words, which
+                    leads to confusion when discussing the code.</p>
+
+            <!-- Insert code for ... icon here -->
+            <div class="post-more" onclick="navigateToPost()">
+                <i class="fa fa-ellipsis-h"></i>
+            </div>
+
+            <!-- Modal for trash -->
+            <div class="trash-modal">
+                <!-- Modal content -->
+                <div class="trash-modal-content">
+                    <p>Are you sure you want to delete this post?</p>
+                    <div class="trash-buttons-container">
+                        <button class="trash-modal-button-yes">Yes</button>
+                        <button class="trash-modal-button-no">No</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="post">
+        <div class="post-left">
+            <p class="post-username">Srishti Gupta</p>
+        </div>
+        <div class="post-content">
+
+            <!-- Insert code for Trash icon here -->
+            <div class="post-trash">
+                <i class="fa fa-trash" style="font-size:22px"></i>
+            </div>
+
+            <p class="post-title">Everything you should know about ‘module’ & ‘require’ in Node.js</p>
+            <p class="post-desc">Node.js treats each JavaScript file as a separate module. For instance, if you have a file containing some code and this file is named xyz.js, then this file is treated as a module in Node, and you can say that you’ve created a module
+                    named xyz.</p>
+
+            <!-- Insert code for ... icon here -->
+            <div class="post-more" onclick="navigateToPost()">
+                <i class="fa fa-ellipsis-h"></i>
+            </div>
+
+            <!-- Modal for trash -->
+            <div class="trash-modal">
+                <!-- Modal content -->
+                <div class="trash-modal-content">
+                    <p>Are you sure you want to delete this post?</p>
+                    <div class="trash-buttons-container">
+                        <button class="trash-modal-button-yes">Yes</button>
+                        <button class="trash-modal-button-no">No</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+            <script src="..\js\postslist.js">  </script>
+            <script src="..\js\common.js"> </script>
+        </body>
+
 </body>
 
 </html>
